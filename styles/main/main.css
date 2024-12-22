@@ -50,19 +50,28 @@
 .save__buttons {
   display: flex;
   align-items: center;
-  padding: 18.5px 20px;
-  gap: 12px;
+
+  padding: 15px 20px;
+  gap: 8px;
   border: var(--border);
 }
 
 .save__icon {
   position: relative;
   mix-blend-mode: difference;
+  
+}
+
+.floppy {
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 .dialog[open] {
+  position: fixed;
   display: flex;
   flex-direction: column;
+  padding: 30px;
   gap: 30px;
   background-color: #fff;
   color: #fff;
@@ -80,6 +89,8 @@ body:has(.dialog[open]) {
 
 .dialog__head {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -89,11 +100,10 @@ body:has(.dialog[open]) {
 }
 
 .disket__text {
-  display: block;
   font-family: var(--accent-font-fam);
   font-size: 14px;
   text-transform: uppercase;
-  max-inline-size: 250px;
+  inline-size: 250px;
 }
 
 /* фильтры для картинок */
@@ -131,7 +141,20 @@ body:has(.dialog[open]) {
     right: 13px;
   }
 
+  .dialog[open] {
+    padding: 30px 42px;
+  }
+
   .save__buttons {
     flex-direction: column;
+  }
+
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .disket__text {
+    inline-size: 198px;
   }
 }
