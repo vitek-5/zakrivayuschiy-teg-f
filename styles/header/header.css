@@ -1,0 +1,15 @@
+.header {
+    inline-size: var(--container-inline-size);
+    margin: 100px auto;
+    border: var(--border);
+    font-family: var(--accent-font-fam);
+    padding: 100px 0;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -13,4 +13,75 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font-fam, sans-serif);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-font-height);
+}
+
+img {
+  inline-size: 100%;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image::after {
+  content: "</HTML>";
+  font-family: var(--accent-font-fam);
+  text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 1px #fff;
+  opacity: 0.5;
+  position: absolute;
+  background-blend-mode: hard-light;
+  top: 25px;
+  right: 25px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  font-family: var(--accent-font-fam);
+  border: var(--border);
+  font-size: 14px;
+  line-height: 12.6px;
+  align-self: center;
+  justify-self: center;
+  transition: 0.5s ease-in-out;
+}
+
+.button::before {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 0;
+  background-color: black;
+  transition: 0.5s ease-in-out;
+}
+.button:hover::before {
+  inline-size: 100%;
+}
+
+.button span {
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 black;
 }
