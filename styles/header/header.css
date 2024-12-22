@@ -3,8 +3,8 @@
     margin: 100px auto;
     border: var(--border);
     font-family: var(--accent-font-fam);
-    padding: 100px 0;
     background-color: #fff;
+    padding: 128px 0;
 }
 
 .header__logo {
@@ -13,4 +13,21 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.header__logo__title {
+    font-size: var(--title-size);
+    line-height: var(--title-size);
+}
+
+.header__logo__text {
+    font-size: var(--title-text-size);
+    line-height: var(--title-text-size);
+    text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+    .header {
+        padding: 120px 0;
+    }
 }

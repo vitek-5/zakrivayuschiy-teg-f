@@ -11,6 +11,7 @@
 .card {
   border: var(--border);
   background-color: #fff;
+  inline-size: var(--container-inline-size);
 }
 
 .card__title {
@@ -32,7 +33,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .card__icon-button {
@@ -70,6 +71,10 @@
 .dialog[open]::backdrop {
   background-color: #000;
   opacity: 0.75;
+}
+
+body:has(.dialog[open]) {
+  overflow: hidden;
 }
 
 .dialog__head {
@@ -122,7 +127,11 @@
   filter: hue-rotate(-270deg) blur(3px);
 }
 
-@media (max-width: 375px) {
+@media (width <= 375px) {
+  .label {
+    right: 13px;
+  }
+
   .save__buttons {
     flex-direction: column;
   }

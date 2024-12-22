@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-img);
-  
+
   font-family: var(--main-font-fam, sans-serif);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-font-height);
@@ -22,27 +22,45 @@
 
 img {
   inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
 }
 
 .card__image {
   position: relative;
+  block-size: 100%;
+  border-top: var(--border);
+  border-bottom: var(--border);
 }
 
-.card__image::after {
-  content: "</HTML>";
+
+.label {
   font-family: var(--accent-font-fam);
-  text-shadow: 0 0 1px #fff;
-  opacity: 0.5;
+  font-size: 14px;
   position: absolute;
-  background-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: 
+  -1px 0 var(--label-text-shadow),
+  0 1px var(--label-text-shadow),
+  1px 0 var(--label-text-shadow),
+  0 -1px var(--label-text-shadow);
   top: 25px;
   right: 25px;
+  z-index: 2;
+  mix-blend-mode: hard-light;
 }
 
-@supports ( text-stroke: 1px #fff) and (-webkit-text-stroke: 1px #fff) {
-  .card__image::after {
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
+@supports (text-stroke: 1px var(--label-text-shadow)) or (-webkit-text-stroke: 1px var(--label-text-shadow)) or
+  (o-text-stroke: 1px var(--label-text-shadow)) or (moz-text-stroke: 1px var(--label-text-shadow)) or
+  (ms-text-stroke: 1px var(--label-text-shadow)) {
+  .label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-text-shadow);
+    o-text-stroke: 1px var(--label-text-shadow);
+    moz-text-stroke: 1px var(--label-text-shadow);
+    ms-text-stroke: 1px var(--label-text-shadow);
+    text-stroke: 1px var(--label-text-shadow);
   }
 }
 
@@ -70,7 +88,7 @@ button {
 
 .button::before {
   position: absolute;
-  content: '';
+  content: "";
   inset: 0;
   background-color: black;
   transform-origin: left;
@@ -79,7 +97,7 @@ button {
 }
 
 .button:hover::before {
-  content: '';
+  content: "";
   transform: scaleX(1);
 }
 
@@ -95,4 +113,10 @@ button {
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 black;
+}
+
+@media (width <= 375px) {
+  body {
+  max-inline-size: 375px;
+}
 }

@@ -2,16 +2,20 @@
 :root {
     --main-font-fam: 'Inter Variable', sans-serif;
     --accent-font-fam: 'Press Start 2P', sans-serif;
-    --container-inline-size: clamp(375px, 100vw, 700px);
+    --container-inline-size: clamp(320px, 100%, 700px);
     --border: 2px solid #000;
 
     --background-img: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7 0%, #1a1a1a 100%);
 
+    --title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --title-text-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
     --paragraph-font-size: 18px;
     --paragraph-font-height: 21px;
 
+    --label-text-shadow: #fff;
     --main-body-fill: #FF0000;
     --contour-fill: #000;
     --core-fill: #fff;
