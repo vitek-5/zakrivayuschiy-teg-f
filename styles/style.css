@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-img);
-
+  font-variation-settings: "wght" 400;
   font-family: var(--main-font-fam, sans-serif);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-font-height);
@@ -24,12 +24,10 @@ img {
   inline-size: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-
 }
 
 .card__image {
   position: relative;
-  block-size: 100%;
   border-top: var(--border);
   border-bottom: var(--border);
 }

@@ -18,7 +18,7 @@
   padding: 3px 24px 3px 10px;
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-font-height);
-  font-weight: 700;
+  font-variation-settings: "wght" 700;
 }
 
 .card__description {
@@ -103,13 +103,10 @@ body:has(.dialog[open]) {
   filter: invert(80%);
 }
 
-.satutate {
+.saturate {
   filter: saturate(300%);
 }
 
-.satutate {
-  filter: saturate(300%);
-}
 
 .hue-rotate {
   filter: hue-rotate(30deg);
