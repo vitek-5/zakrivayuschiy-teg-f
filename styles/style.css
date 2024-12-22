@@ -18,6 +18,7 @@
   font-family: var(--main-font-fam, sans-serif);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-font-height);
+  background-attachment: fixed;
 }
 
 img {

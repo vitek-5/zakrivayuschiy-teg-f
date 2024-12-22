@@ -66,6 +66,7 @@
   gap: 30px;
   background-color: #fff;
   color: #fff;
+  border: var(--border);
 }
 
 .dialog[open]::backdrop {
@@ -92,6 +93,7 @@ body:has(.dialog[open]) {
   font-family: var(--accent-font-fam);
   font-size: 14px;
   text-transform: uppercase;
+  max-inline-size: 250px;
 }
 
 /* фильтры для картинок */
