@@ -4,6 +4,7 @@
     border: var(--border);
     font-family: var(--accent-font-fam);
     padding: 100px 0;
+    background-color: #fff;
 }
 
 .header__logo {

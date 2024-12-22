@@ -13,6 +13,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--background-img);
+  
   font-family: var(--main-font-fam, sans-serif);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-font-height);
@@ -29,8 +31,6 @@ img {
 .card__image::after {
   content: "</HTML>";
   font-family: var(--accent-font-fam);
-  text-stroke: 1px #fff;
-  -webkit-text-stroke: 1px #fff;
   text-shadow: 0 0 1px #fff;
   opacity: 0.5;
   position: absolute;
@@ -39,7 +39,15 @@ img {
   right: 25px;
 }
 
+@supports ( text-stroke: 1px #fff) and (-webkit-text-stroke: 1px #fff) {
+  .card__image::after {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
+}
+
 button {
+  outline: none;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -48,6 +56,8 @@ button {
 }
 
 .button {
+  background-color: #fff;
+  color: #fff;
   position: relative;
   font-family: var(--accent-font-fam);
   border: var(--border);
@@ -60,22 +70,23 @@ button {
 
 .button::before {
   position: absolute;
-  z-index: 1;
   content: '';
-  top: 0;
-  left: 0;
-  block-size: 100%;
-  inline-size: 0;
+  inset: 0;
   background-color: black;
+  transform-origin: left;
+  transform: scaleX(0);
   transition: 0.5s ease-in-out;
 }
+
 .button:hover::before {
-  inline-size: 100%;
+  content: '';
+  transform: scaleX(1);
 }
 
-.button span {
+.button__text {
   position: relative;
   mix-blend-mode: difference;
+  color: #fff;
 }
 
 .button:focus {

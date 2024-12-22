@@ -10,6 +10,7 @@
 
 .card {
   border: var(--border);
+  background-color: #fff;
 }
 
 .card__title {
@@ -35,13 +36,9 @@
 }
 
 .card__icon-button {
-  inline-size: 39px;
+  inline-size: 38px;
   block-size: 36px;
-}
-
-.like-icon {
-  inline-size: 100%;
-  block-size: 100%;
+  transition: 0.3s ease;
 }
 
 .card__like-button {
@@ -57,38 +54,32 @@
   border: var(--border);
 }
 
-.save__icon-button {
-  inline-size: 21px;
-  block-size: 21px;
-}
-
 .save__icon {
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.save__text {
-  font-family: var(--accent-font-fam);
-  font-size: 14px;
+  position: relative;
+  mix-blend-mode: difference;
 }
 
 .dialog[open] {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #fff;
+  color: #fff;
 }
 
 .dialog__head {
-    display: flex;
-    gap: 20px;
-}
-
-.dialog__save {
-    inline-size: 38px;
-    block-size: 38px;
+  display: flex;
+  gap: 20px;
 }
 
 .dialog__button {
-    inline-size: 100%;
-    block-size: 38px;
+  inline-size: 100%;
+  block-size: 38px;
+}
+
+.disket__text {
+  display: block;
+  font-family: var(--accent-font-fam);
+  font-size: 14px;
+  text-transform: uppercase;
 }

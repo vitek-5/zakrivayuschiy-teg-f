@@ -3,11 +3,17 @@
     --main-font-fam: 'Inter Variable', sans-serif;
     --accent-font-fam: 'Press Start 2P', sans-serif;
     --container-inline-size: clamp(375px, 100vw, 700px);
-    --border: 2px solid;
+    --border: 2px solid #000;
+
+    --background-img: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0%, #1a1a1a 100%);
 
     --paragraph-font-size: 18px;
     --paragraph-font-height: 21px;
 
-    --red: #FF0000;
-    --black: #000;
+    --main-body-fill: #FF0000;
+    --contour-fill: #000;
+    --core-fill: #fff;
+    --sparks-fill: none;
 }
