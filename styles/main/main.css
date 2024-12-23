@@ -68,6 +68,7 @@
 }
 
 .dialog[open] {
+  max-inline-size: 353px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -103,7 +104,6 @@ body:has(.dialog[open]) {
   font-family: var(--accent-font-fam);
   font-size: 14px;
   text-transform: uppercase;
-  inline-size: 250px;
 }
 
 /* фильтры для картинок */
@@ -142,6 +142,7 @@ body:has(.dialog[open]) {
   }
 
   .dialog[open] {
+    max-inline-size: 341px;
     padding: 30px 42px;
   }
 
@@ -152,9 +153,5 @@ body:has(.dialog[open]) {
   .floppy {
     inline-size: 28px;
     block-size: 28px;
-  }
-
-  .disket__text {
-    inline-size: 198px;
   }
 }
